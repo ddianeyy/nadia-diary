@@ -11,10 +11,10 @@
   "birthdayHeadline": "Happy birthday Nadia 🎂, my favorite person.",
   "birthdayIntro": "You bring laughter and radiate positivity everywhere you go. You’re brilliant, talented, and incredibly kind-hearted. Thank you for always treating me so well, and for being the best friend and girlfriend I could ever ask for. My life is so much brighter with you in it. ✨",
   "birthdayGallery": [
-    { "src": "/assets/uploads/birthday-couple-1.jpg", "caption": "" },
-    { "src": "/assets/uploads/birthday-couple-2.jpg", "caption": "" },
-    { "src": "/assets/uploads/birthday-solo-1.jpg", "caption": "" },
-    { "src": "/assets/uploads/birthday-solo-2.png", "caption": "" }
+    { "src": "./assets/uploads/birthday-couple-1.jpg", "caption": "" },
+    { "src": "./assets/uploads/birthday-couple-2.jpg", "caption": "" },
+    { "src": "./assets/uploads/birthday-solo-1.jpg", "caption": "" },
+    { "src": "./assets/uploads/birthday-solo-2.png", "caption": "" }
   ],
   "birthdayWishes": [
     {
