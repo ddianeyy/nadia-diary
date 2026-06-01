@@ -1,0 +1,14 @@
+Upload the CONTENTS of this doll-diary folder to GitHub, not only the HTML files.
+
+Make sure these folders are included:
+- assets
+- assets/uploads
+- content
+- admin
+
+Photos live in assets/uploads. If this folder is missing online, the website will show broken images.
+
+After GitHub Pages finishes building, test one image directly:
+https://ddianeyy.github.io/nadia-diary/assets/uploads/nadia-mac-pov-collage.jpg
+
+If that image opens, the website photos should work too.
