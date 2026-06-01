@@ -61,7 +61,7 @@
                 const letterId = `letter-${itemIndex}`;
                 const collage = pics
                   .map((pic, idx) => {
-                    const src = pic?.src ? String(pic.src) : "";
+                    const src = pic?.src ? window.DollDiaryContent.assetPath(pic.src) : "";
                     if (!src) return "";
                     const cap = pic?.caption ? String(pic.caption) : "";
                     const tilt = idx === 0 ? "tilt-a" : "tilt-b";

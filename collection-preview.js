@@ -21,7 +21,7 @@ function makeCaption({ name, tag, color, detail }) {
 }
 
 function renderPreviewPhoto(photo, name) {
-  if (photo) return `<img src="${photo}" alt="${name || "Doll photo"}" />`;
+  if (photo) return `<img src="${window.DollDiaryContent.assetPath(photo)}" alt="${name || "Doll photo"}" />`;
   return "<span>Photo later</span>";
 }
 

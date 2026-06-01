@@ -4,6 +4,14 @@ async function loadJson(path) {
   return await response.json();
 }
 
+function assetPath(src) {
+  if (!src) return "";
+  const value = String(src).trim();
+  if (/^(https?:|data:|blob:|\.\/|\.\.\/)/i.test(value)) return value;
+  if (value.startsWith("/assets/")) return `.${value}`;
+  return value;
+}
+
 function setText(selector, value) {
   const el = document.querySelector(selector);
   if (!el) return;
@@ -19,13 +27,13 @@ function setImage(selector, src, alt) {
     return;
   }
   el.removeAttribute("hidden");
-  el.setAttribute("src", src);
+  el.setAttribute("src", assetPath(src));
   if (alt) el.setAttribute("alt", alt);
 }
 
 window.DollDiaryContent = {
+  assetPath,
   loadJson,
   setText,
   setImage
 };
-
