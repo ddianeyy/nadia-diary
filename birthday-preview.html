@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Happy Birthday</title>
+    <title>Happy Birthday Preview</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./fluffy-preview.css" />
   </head>
   <body>
     <header class="site-header">
@@ -13,12 +12,12 @@
       <nav aria-label="Main navigation">
         <a href="./index.html">Dianeyy 🐰</a>
         <a href="./collection.html">Nadia's Dolls 🧸</a>
-        <a aria-current="page" href="./birthday.html">Happy Birthday 🎂</a>
+        <a aria-current="page" href="./birthday-preview.html">Happy Birthday 🎂</a>
       </nav>
     </header>
 
     <main>
-      <section class="birthday-hero">
+      <section class="birthday-hero birthday-hero-preview">
         <p class="eyebrow" id="birthdayEyebrow"></p>
         <h1 id="birthdayHeadline">Happy birthday Nadia 🎂, my favorite person.</h1>
         <figure class="hero-memory-strip">
@@ -48,9 +47,10 @@
 
           const wishes = document.querySelector("#birthdayWishes");
           if (wishes) {
+            wishes.classList.add("letter-wish-grid");
             const items = Array.isArray(site.birthdayWishes) ? site.birthdayWishes : [];
             wishes.innerHTML = items
-              .map((item) => {
+              .map((item, itemIndex) => {
                 const title = item?.title ? String(item.title) : "";
                 const paras2 = Array.isArray(item?.paras) ? item.paras : [];
                 const body = paras2.map((p) => `<p>${String(p)}</p>`).join("");
@@ -58,6 +58,7 @@
                 const pics = (isForYou ? soloPhotos : couplePhotos).slice(0, 2);
                 const sticker = isForYou ? "🧸" : "🎎";
                 const accent = isForYou ? "soft-bear" : "tiny-dolls";
+                const letterId = `letter-${itemIndex}`;
                 const collage = pics
                   .map((pic, idx) => {
                     const src = pic?.src ? String(pic.src) : "";
@@ -74,19 +75,36 @@
                   })
                   .join("");
                 return `
-                  <article class="wish-card">
-                    <div class="wish-text">
-                      <span class="wish-sticker ${accent}" aria-hidden="true">${sticker}</span>
-                      <h2>${title}</h2>
-                      ${body}
-                    </div>
-                    <div class="wish-photos" aria-hidden="true">
-                      ${collage}
+                  <article class="wish-card letter-card">
+                    <button class="letter-cover" type="button" aria-expanded="false" aria-controls="${letterId}">
+                      <span class="letter-seal ${accent}" aria-hidden="true">${sticker}</span>
+                      <span class="letter-cover-title">${title}</span>
+                      <span class="letter-cover-subtitle">tap to open</span>
+                    </button>
+                    <div class="letter-inside" id="${letterId}" hidden>
+                      <div class="wish-text">
+                        <span class="wish-sticker ${accent}" aria-hidden="true">${sticker}</span>
+                        <h2>${title}</h2>
+                        ${body}
+                      </div>
+                      <div class="wish-photos" aria-hidden="true">
+                        ${collage}
+                      </div>
                     </div>
                   </article>
                 `;
               })
               .join("");
+
+            wishes.querySelectorAll(".letter-cover").forEach((button) => {
+              button.addEventListener("click", () => {
+                const card = button.closest(".letter-card");
+                const letter = card.querySelector(".letter-inside");
+                const isOpen = card.classList.toggle("is-open");
+                button.setAttribute("aria-expanded", String(isOpen));
+                letter.hidden = !isOpen;
+              });
+            });
           }
         } catch {}
       })();

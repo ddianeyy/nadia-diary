@@ -3,16 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nadia's Dolls | Nadia's Diary 🎀</title>
+    <title>Nadia's Dolls Preview | Nadia's Diary 🎀</title>
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./fluffy-preview.css" />
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="./index.html" id="siteTitle">Nadia's Diary 🎀</a>
       <nav aria-label="Main navigation">
         <a href="./index.html">Dianeyy 🐰</a>
-        <a aria-current="page" href="./collection.html">Nadia's Dolls 🧸</a>
+        <a aria-current="page" href="./collection-preview.html">Nadia's Dolls 🧸</a>
         <a href="./birthday.html">Happy Birthday 🎂</a>
       </nav>
     </header>
@@ -23,25 +22,16 @@
         <h1>Nadia's tiny cabinet of soft treasures.</h1>
         <p>
           Plushies, charms, and little finds sit together like a private mini
-          museum. Tap a cabinet door to peek inside each tiny story 🗝️.
+          museum. Tap a cabinet door to peek inside each tiny story.
         </p>
       </section>
 
-      <section>
-        <div class="section-heading">
-          <p class="eyebrow">Tiny cabinet stories</p>
-          <h2>Open a little treasure door</h2>
+      <section class="doll-studio-preview" aria-label="Add a doll preview">
+        <div>
+          <p class="eyebrow">Add a doll</p>
+          <h2>Make a new little card</h2>
         </div>
-        <div id="previewCollectionGrid" class="doll-grid doll-keepsake-grid"></div>
-      </section>
-
-      <section class="doll-studio-preview drawer-editor" aria-label="Add a doll">
-        <button class="drawer-editor-cover" type="button" aria-expanded="false" aria-controls="previewDollForm">
-          <span aria-hidden="true">🗝️</span>
-          <strong>Add a tiny treasure</strong>
-          <small>Open this drawer when you want to add a new doll.</small>
-        </button>
-        <form id="previewDollForm" class="preview-doll-form" hidden>
+        <form id="previewDollForm" class="preview-doll-form">
           <label>
             Doll photo
             <input id="dollPhotoInput" type="file" accept="image/*" />
@@ -76,9 +66,17 @@
           </div>
         </form>
       </section>
+
+      <section>
+        <div class="section-heading">
+          <p class="eyebrow">Gallery preview</p>
+          <h2>Tap a cabinet door</h2>
+        </div>
+        <div id="previewCollectionGrid" class="doll-grid doll-keepsake-grid"></div>
+      </section>
     </main>
 
-    <footer>Made for her favorite little friends.</footer>
+    <footer>Preview only. Nothing here is saved to the real collection yet.</footer>
     <script src="./content/content.js"></script>
     <script src="./collection-preview.js"></script>
   </body>

@@ -1,0 +1,269 @@
+body {
+  background:
+    radial-gradient(circle at 14% 10%, rgba(255, 224, 232, 0.7) 0 90px, transparent 91px),
+    radial-gradient(circle at 88% 22%, rgba(255, 248, 216, 0.72) 0 110px, transparent 111px),
+    linear-gradient(90deg, rgba(248, 238, 232, 0.58) 0 10px, transparent 10px 30px),
+    linear-gradient(180deg, #fffaf7, #fff0f4 48%, #fbfff9);
+}
+
+.site-header {
+  border-bottom-color: rgba(228, 191, 201, 0.74);
+  background: rgba(255, 250, 247, 0.86);
+  box-shadow: 0 10px 32px rgba(128, 69, 82, 0.08);
+}
+
+.brand {
+  position: relative;
+  font-size: 20px;
+}
+
+.brand::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #f6ccd7;
+  box-shadow: 15px -4px 0 #fff0b8, 27px 4px 0 #d8eee5;
+}
+
+nav a {
+  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+nav a[aria-current="page"] {
+  border-color: rgba(223, 127, 145, 0.2);
+  background: linear-gradient(180deg, #fff4f7, #ffe9ef);
+  box-shadow: 0 8px 18px rgba(223, 127, 145, 0.12);
+}
+
+.hero {
+  gap: clamp(26px, 5vw, 54px);
+}
+
+.hero-copy {
+  position: relative;
+  padding-top: 10px;
+}
+
+h1 {
+  text-wrap: balance;
+}
+
+.hero-copy > p:not(.eyebrow),
+.page-intro > p,
+.birthday-hero > p {
+  color: #765f66;
+}
+
+.button {
+  border-radius: 999px;
+}
+
+.primary {
+  background: linear-gradient(135deg, #de7890, #c95d78);
+  box-shadow: 0 12px 24px rgba(201, 93, 120, 0.22);
+}
+
+.ghost {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.hero-pov-frame,
+.pov-memory-frame,
+.hero-memory-strip,
+.scrapbook-photo,
+.doll-keepsake-card,
+.wish-card,
+.preview-link-card,
+.photo-card,
+.bio-photo {
+  border-color: rgba(228, 191, 201, 0.9);
+  box-shadow:
+    0 16px 34px rgba(128, 69, 82, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.58);
+}
+
+.hero-pov-frame {
+  padding: 14px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 244, 247, 0.82));
+}
+
+.hero-pov-frame::before,
+.hero-pov-frame::after,
+.scrapbook-photo::before,
+.polaroid::before,
+.hero-memory-strip::before {
+  background:
+    linear-gradient(90deg, rgba(255, 248, 216, 0.72), rgba(255, 240, 243, 0.72));
+}
+
+.bio-section,
+.nadia-notes-section,
+.pov-memory-section {
+  border-color: rgba(228, 191, 201, 0.72);
+}
+
+.nadia-notes-section,
+.preview-grid {
+  position: relative;
+}
+
+.nadia-notes-section::after {
+  content: "";
+  position: absolute;
+  top: 86px;
+  right: 8%;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 28% 28%, #ffe1ea 0 13px, transparent 14px),
+    radial-gradient(circle at 68% 24%, #fff1b8 0 11px, transparent 12px),
+    radial-gradient(circle at 50% 68%, #d8eee5 0 12px, transparent 13px);
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.nadia-notes-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.nadia-notes-copy .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(223, 127, 145, 0.18);
+  border-radius: 999px;
+  padding: 7px 13px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.bio-section {
+  position: relative;
+}
+
+.bio-section::before {
+  content: "♡";
+  position: absolute;
+  top: -19px;
+  left: 28px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(223, 127, 145, 0.18);
+  border-radius: 50%;
+  color: var(--rose-dark);
+  background: #fff8fb;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.nadia-notes-list li {
+  border-color: rgba(228, 191, 201, 0.8);
+  background:
+    linear-gradient(90deg, rgba(255, 240, 243, 0.54), rgba(255, 255, 255, 0.66));
+}
+
+.nadia-notes-list li::before {
+  content: "♡";
+}
+
+.scrapbook-collage {
+  gap: 16px;
+}
+
+.scrapbook-photo figcaption {
+  color: #a2475b;
+}
+
+.preview-link-card {
+  position: relative;
+  min-height: 182px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 240, 243, 0.58));
+  overflow: hidden;
+}
+
+.preview-link-card::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 26% 32%, rgba(255, 225, 234, 0.95) 0 9px, transparent 10px),
+    radial-gradient(circle at 70% 28%, rgba(255, 241, 184, 0.95) 0 8px, transparent 9px),
+    radial-gradient(circle at 54% 72%, rgba(216, 238, 229, 0.95) 0 8px, transparent 9px);
+  opacity: 0.9;
+}
+
+.preview-link-card::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: 0;
+  width: 96px;
+  height: 8px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, #df7f91, #fff0b8, #d8eee5);
+  opacity: 0.68;
+}
+
+.preview-link-card .card-icon {
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(223, 127, 145, 0.18);
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.preview-link-card h3,
+.preview-link-card p {
+  position: relative;
+  z-index: 1;
+}
+
+.preview-link-card h3::after,
+.wish-text h2::after,
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #df7f91, #fff0b8);
+}
+
+.doll-keepsake-grid {
+  background:
+    linear-gradient(180deg, rgba(212, 154, 120, 0.14) 0 12px, transparent 12px 31px),
+    linear-gradient(90deg, rgba(255, 240, 243, 0.52) 0 16px, transparent 16px),
+    rgba(255, 250, 247, 0.7);
+}
+
+.doll-cover {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent 20%, transparent 80%, rgba(157, 64, 85, 0.08)),
+    linear-gradient(180deg, #fff8f3, #ffeef4);
+}
+
+.letter-cover {
+  background:
+    linear-gradient(32deg, transparent 49.5%, rgba(223, 127, 145, 0.18) 50%, transparent 50.5%),
+    linear-gradient(148deg, transparent 49.5%, rgba(223, 127, 145, 0.18) 50%, transparent 50.5%),
+    linear-gradient(180deg, rgba(255, 248, 216, 0.65), rgba(255, 240, 243, 0.75));
+}
+
+footer {
+  color: #8b6972;
+}
