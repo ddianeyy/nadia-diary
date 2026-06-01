@@ -81,53 +81,7 @@
           window.DollDiaryContent.setText("#birthdayHeadline", site.birthdayHeadline);
           window.DollDiaryContent.setText("#birthdayIntro", site.birthdayIntro);
 
-          const photos = Array.isArray(site.birthdayGallery) ? site.birthdayGallery : [];
-          const soloPhotos = photos.filter((p) => String(p?.src || "").toLowerCase().includes("solo"));
-          const couplePhotos = photos.filter((p) => String(p?.src || "").toLowerCase().includes("couple"));
-
-          const wishes = document.querySelector("#birthdayWishes");
-          if (wishes) {
-            const items = Array.isArray(site.birthdayWishes) ? site.birthdayWishes : [];
-            wishes.innerHTML = items
-              .map((item) => {
-                const title = item?.title ? String(item.title) : "";
-                const paras2 = Array.isArray(item?.paras) ? item.paras : [];
-                const body = paras2.map((p) => `<p>${String(p)}</p>`).join("");
-                const isForYou = title.trim().toLowerCase() === "for you";
-                const pics = (isForYou ? soloPhotos : couplePhotos).slice(0, 2);
-                const sticker = isForYou ? "🧸" : "🎎";
-                const accent = isForYou ? "soft-bear" : "tiny-dolls";
-                const collage = pics
-                  .map((pic, idx) => {
-                    const src = pic?.src ? window.DollDiaryContent.assetPath(pic.src) : "";
-                    if (!src) return "";
-                    const cap = pic?.caption ? String(pic.caption) : "";
-                    const tilt = idx === 0 ? "tilt-a" : "tilt-b";
-                    const focus = String(src).toLowerCase().includes("solo") ? "portrait-top" : "";
-                    return `
-                      <figure class="polaroid ${tilt} ${focus}">
-                        <img src="${src}" alt="Photo memory" loading="lazy" />
-                        ${cap ? `<figcaption>${cap}</figcaption>` : "<figcaption></figcaption>"}
-                      </figure>
-                    `;
-                  })
-                  .join("");
-                return `
-                  <article class="wish-card">
-                    <div class="wish-text">
-                      <span class="wish-sticker ${accent}" aria-hidden="true">${sticker}</span>
-                      <h2>${title}</h2>
-                      ${body}
-                    </div>
-                    <div class="wish-photos" aria-hidden="true">
-                      ${collage}
-                    </div>
-                  </article>
-                `;
-              })
-              .join("");
-            window.DollDiaryContent.enableImageFallbacks(wishes);
-          }
+          window.DollDiaryContent.enableImageFallbacks(document);
         } catch {}
       })();
     </script>
