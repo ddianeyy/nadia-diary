@@ -1,0 +1,9 @@
+{
+  "dolls": [
+    {
+      "name": "Mimi",
+      "photo": "./sample-doll-diary.png",
+      "caption": "Mimi sits in the middle of a soft birthday shelf, surrounded by tiny keepsakes and warm pink light. She looks like the first page of a very loved collection."
+    }
+  ]
+}

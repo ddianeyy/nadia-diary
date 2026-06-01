@@ -1,0 +1,39 @@
+{
+  "siteTitle": "Her Doll Diary",
+  "homeEyebrow": "A tiny private museum",
+  "homeHeadline": "A cozy diary for her sweetest doll collection.",
+  "homeDescription": "A soft little place for every doll she loves, the stories behind them, and a birthday note kept just for the two of you.",
+  "bioEyebrow": "Mini bio",
+  "bioTitle": "The girl this diary belongs to",
+  "bioText": "She is the kind of person who can make small things feel precious. Every doll here is part of her gentle little universe: soft colors, cute faces, tiny outfits, and memories worth keeping.",
+  "bioPhoto": "",
+  "birthdayEyebrow": "",
+  "birthdayHeadline": "Happy birthday 🎂 Nadia, my favorite person.",
+  "birthdayIntro": "You bring laughter and radiate positivity everywhere you go. You’re brilliant, talented, and incredibly kind-hearted. Thank you for always treating me so well, and for being the best friend and girlfriend I could ever ask for. My life is so much brighter with you in it.",
+  "birthdayGallery": [
+    { "src": "/assets/uploads/birthday-couple-1.jpg", "caption": "" },
+    { "src": "/assets/uploads/birthday-couple-2.jpg", "caption": "" },
+    { "src": "/assets/uploads/birthday-solo-1.jpg", "caption": "" },
+    { "src": "/assets/uploads/birthday-solo-2.png", "caption": "" }
+  ],
+  "birthdayWishes": [
+    {
+      "title": "For you",
+      "paras": [
+        "My wish for you is that you feel deeply loved in every single moment. Take time to appreciate the incredible person you are, each and every day.",
+        "Here’s to your vibrant health and strength. May you always be surrounded by kind-hearted people who lift you up.",
+        "Success is bound to follow as you build your career and your own brand. You deserve true joy in everything you touch."
+      ]
+    },
+    {
+      "title": "For us",
+      "paras": [
+        "As for us, let's keep creating tiny, beautiful memories together. I love our everyday conversations that make us feel right at home.",
+        "I can't wait to cross continents by your side. Let's explore every corner of this world and never stop chasing fun new adventures.",
+        "Let’s always choose love over any fear or doubt. No matter what comes our way, let's keep growing side by side for an eternity."
+      ]
+    }
+  ],
+  "signatureLine1": "Your boyfriend",
+  "signatureLine2": ""
+}

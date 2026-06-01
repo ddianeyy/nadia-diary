@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - name: "site"
+        label: "Main Content"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - { label: "Home Eyebrow", name: "homeEyebrow", widget: "string" }
+          - { label: "Home Headline", name: "homeHeadline", widget: "string" }
+          - { label: "Home Description", name: "homeDescription", widget: "text" }
+          - { label: "Bio Eyebrow", name: "bioEyebrow", widget: "string" }
+          - { label: "Bio Title", name: "bioTitle", widget: "string" }
+          - { label: "Bio Text", name: "bioText", widget: "text" }
+          - { label: "Bio Photo", name: "bioPhoto", widget: "image", required: false }
+          - { label: "Birthday Eyebrow", name: "birthdayEyebrow", widget: "string" }
+          - { label: "Birthday Headline", name: "birthdayHeadline", widget: "string" }
+          - { label: "Birthday Intro", name: "birthdayIntro", widget: "text" }
+          - label: "Birthday Photos"
+            name: "birthdayGallery"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Photo", name: "src", widget: "image" }
+              - { label: "Caption (optional)", name: "caption", widget: "string", required: false }
+          - label: "Birthday Wishes"
+            name: "birthdayWishes"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Card Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paras"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+  - name: "dolls"
+    label: "Dolls"
+    files:
+      - name: "dolls"
+        label: "Doll Collection"
+        file: "content/dolls.json"
+        format: "json"
+        fields:
+          - label: "Dolls"
+            name: "dolls"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Caption", name: "caption", widget: "text" }
