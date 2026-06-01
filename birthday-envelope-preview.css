@@ -1,0 +1,236 @@
+.envelope-stage {
+  padding: 26px clamp(18px, 5vw, 76px) 72px;
+}
+
+.envelope-intro {
+  max-width: 1120px;
+  margin: 0 auto 22px;
+}
+
+.envelope-intro .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(226, 126, 154, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 250, 244, 0.76);
+  color: #a83d5a;
+}
+
+.envelope-intro h2 {
+  margin: 16px 0 8px;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 0.98;
+}
+
+.envelope-intro p {
+  max-width: 660px;
+  color: #7d646d;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.envelope-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.envelope-card {
+  position: relative;
+  min-height: 0;
+  display: grid;
+}
+
+.envelope-card .wish-card {
+  min-height: 560px;
+  height: auto;
+  padding: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.72)),
+    rgba(255, 255, 255, 0.62);
+}
+
+.envelope-card .wish-text h3 {
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  line-height: 0.96;
+}
+
+.envelope-card .wish-text p {
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.envelope-card .polaroid figcaption {
+  font-size: 13px;
+}
+
+.envelope-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(226, 126, 154, 0.3);
+  border-radius: 8px;
+  background:
+    linear-gradient(32deg, transparent 49.7%, rgba(226, 126, 154, 0.18) 50%, transparent 50.4%),
+    linear-gradient(-32deg, transparent 49.7%, rgba(226, 126, 154, 0.18) 50%, transparent 50.4%),
+    linear-gradient(155deg, rgba(255, 250, 251, 0.96), rgba(255, 229, 238, 0.92));
+  box-shadow: 0 22px 52px rgba(107, 59, 72, 0.13);
+  color: #412a34;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.62s ease, opacity 0.42s ease;
+}
+
+.envelope-cover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 54%;
+  background:
+    linear-gradient(142deg, transparent 49.5%, rgba(226, 126, 154, 0.22) 50%, transparent 50.8%),
+    linear-gradient(-142deg, transparent 49.5%, rgba(226, 126, 154, 0.22) 50%, transparent 50.8%),
+    rgba(255, 239, 245, 0.72);
+}
+
+.envelope-cover-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  transform: translateY(-8px);
+}
+
+.wax-seal {
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #fff7fa;
+  border: 1px solid rgba(226, 126, 154, 0.24);
+  box-shadow: 0 12px 24px rgba(161, 69, 92, 0.13);
+  font-size: 2rem;
+}
+
+.envelope-cover strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 0.92;
+}
+
+.envelope-cover span:last-child {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff9fb;
+  border: 1px solid rgba(226, 126, 154, 0.28);
+  color: #a83d5a;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.envelope-card.is-open .envelope-cover {
+  transform: translateY(-104%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close-envelope {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 4;
+  border: 1px solid rgba(226, 126, 154, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #a83d5a;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .site-header {
+    gap: 14px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  nav a {
+    min-height: 42px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .birthday-hero > p,
+  .hero-copy > p:not(.eyebrow),
+  .page-intro p,
+  .bio-section p,
+  .nadia-notes-list li,
+  .doll-card p,
+  .doll-personality,
+  .collection-tools p {
+    font-size: 16px;
+    line-height: 1.68;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+  }
+
+  .envelope-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .envelope-card .wish-card {
+    min-height: 0;
+  }
+
+  .envelope-intro h2 {
+    font-size: clamp(2.25rem, 9vw, 3.6rem);
+  }
+
+  .envelope-intro p {
+    font-size: 16px;
+  }
+
+  .envelope-card .wish-text h3 {
+    font-size: clamp(2.45rem, 10vw, 3.8rem);
+  }
+
+  .envelope-card .wish-text p {
+    font-size: 16.5px;
+    line-height: 1.72;
+  }
+
+  .envelope-cover span:last-child,
+  .close-envelope {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .envelope-stage {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
