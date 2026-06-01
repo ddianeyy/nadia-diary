@@ -12,6 +12,28 @@ function assetPath(src) {
   return value;
 }
 
+function rootPhotoFallback(src) {
+  const value = String(src || "").trim();
+  if (!value.includes("assets/uploads/")) return "";
+  const fileName = value.split("/").filter(Boolean).pop();
+  return fileName ? `./${fileName}` : "";
+}
+
+function applyImageFallback(img) {
+  if (!img || img.dataset.fallbackReady === "true") return;
+  img.dataset.fallbackReady = "true";
+  img.addEventListener("error", () => {
+    const fallback = rootPhotoFallback(img.getAttribute("src"));
+    if (!fallback || img.dataset.usedRootFallback === "true") return;
+    img.dataset.usedRootFallback = "true";
+    img.setAttribute("src", fallback);
+  });
+}
+
+function enableImageFallbacks(root = document) {
+  root.querySelectorAll("img").forEach(applyImageFallback);
+}
+
 function setText(selector, value) {
   const el = document.querySelector(selector);
   if (!el) return;
@@ -28,11 +50,15 @@ function setImage(selector, src, alt) {
   }
   el.removeAttribute("hidden");
   el.setAttribute("src", assetPath(src));
+  applyImageFallback(el);
   if (alt) el.setAttribute("alt", alt);
 }
 
+document.addEventListener("DOMContentLoaded", () => enableImageFallbacks());
+
 window.DollDiaryContent = {
   assetPath,
+  enableImageFallbacks,
   loadJson,
   setText,
   setImage

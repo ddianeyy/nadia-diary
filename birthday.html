@@ -28,7 +28,46 @@
         <p id="birthdayIntro"></p>
       </section>
 
-      <section class="wish-grid" id="birthdayWishes" aria-label="Birthday wishes"></section>
+      <section class="wish-grid" id="birthdayWishes" aria-label="Birthday wishes">
+        <article class="wish-card">
+          <div class="wish-text">
+            <span class="wish-sticker soft-bear" aria-hidden="true">🧸</span>
+            <h2>For you</h2>
+            <p>My wish for you is that you feel deeply loved in every single moment. Take time to appreciate the incredible person you are, each and every day.</p>
+            <p>Here’s to your vibrant health and strength. May you always be surrounded by kind-hearted people who lift you up.</p>
+            <p>Success is bound to follow as you build your career and your own brand. You deserve true joy in everything you touch.</p>
+          </div>
+          <div class="wish-photos" aria-hidden="true">
+            <figure class="polaroid tilt-a portrait-top">
+              <img src="./assets/uploads/birthday-solo-1.jpg" alt="Photo memory" loading="lazy" />
+              <figcaption></figcaption>
+            </figure>
+            <figure class="polaroid tilt-b portrait-top">
+              <img src="./assets/uploads/birthday-solo-2.png" alt="Photo memory" loading="lazy" />
+              <figcaption></figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="wish-card">
+          <div class="wish-text">
+            <span class="wish-sticker tiny-dolls" aria-hidden="true">🎎</span>
+            <h2>For us</h2>
+            <p>As for us, let's keep creating tiny, beautiful memories together. I love our everyday conversations that make us feel right at home.</p>
+            <p>I can't wait to cross continents by your side. Let's explore every corner of this world and never stop chasing fun new adventures.</p>
+            <p>Let’s always choose love over any fear or doubt. No matter what comes our way, let's keep growing side by side for an eternity.</p>
+          </div>
+          <div class="wish-photos" aria-hidden="true">
+            <figure class="polaroid tilt-a">
+              <img src="./assets/uploads/birthday-couple-1.jpg" alt="Photo memory" loading="lazy" />
+              <figcaption></figcaption>
+            </figure>
+            <figure class="polaroid tilt-b">
+              <img src="./assets/uploads/birthday-couple-2.jpg" alt="Photo memory" loading="lazy" />
+              <figcaption></figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
     </main>
 
     <footer></footer>
@@ -87,6 +126,7 @@
                 `;
               })
               .join("");
+            window.DollDiaryContent.enableImageFallbacks(wishes);
           }
         } catch {}
       })();
