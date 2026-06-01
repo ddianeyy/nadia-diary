@@ -6,15 +6,15 @@
   "bioEyebrow": "Mini bio",
   "bioTitle": "The girl this diary belongs to",
   "bioText": "Her world is full of soft details, pretty little treasures, and warm conversations. She has the softest heart and cares deeply about the people around her. She makes everything feel more fun, even the simplest moments. This diary is for the joy she creates, the memories that stay, and the way she makes ordinary days feel brighter. ♡",
-  "bioPhoto": "./assets/uploads/nadia-note-1.jpg",
+  "bioPhoto": "./nadia-note-1.jpg",
   "birthdayEyebrow": "",
   "birthdayHeadline": "Happy birthday Nadia 🎂, my favorite person.",
   "birthdayIntro": "You bring laughter and radiate positivity everywhere you go. You’re brilliant, talented, and incredibly kind-hearted. Thank you for always treating me so well, and for being the best friend and girlfriend I could ever ask for. My life is so much brighter with you in it. ✨",
   "birthdayGallery": [
-    { "src": "./assets/uploads/birthday-couple-1.jpg", "caption": "" },
-    { "src": "./assets/uploads/birthday-couple-2.jpg", "caption": "" },
-    { "src": "./assets/uploads/birthday-solo-1.jpg", "caption": "" },
-    { "src": "./assets/uploads/birthday-solo-2.png", "caption": "" }
+    { "src": "./birthday-couple-1.jpg", "caption": "" },
+    { "src": "./birthday-couple-2.jpg", "caption": "" },
+    { "src": "./birthday-solo-1.jpg", "caption": "" },
+    { "src": "./birthday-solo-2.png", "caption": "" }
   ],
   "birthdayWishes": [
     {
