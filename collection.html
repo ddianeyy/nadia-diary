@@ -6,6 +6,7 @@
     <title>Nadia's Dolls | Nadia's Diary 🎀</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./fluffy-preview.css" />
+    <link rel="stylesheet" href="./collection-edit-preview.css" />
   </head>
   <body>
     <header class="site-header">
@@ -38,15 +39,21 @@
         <div id="previewCollectionGrid" class="doll-grid doll-keepsake-grid"></div>
       </section>
 
-      <section class="doll-studio-preview drawer-editor" aria-label="Add a doll">
+      <section class="doll-studio-preview drawer-editor" aria-label="Add or edit a doll">
         <button class="drawer-editor-cover" type="button" aria-expanded="false" aria-controls="previewDollForm">
           <span aria-hidden="true">🗝️</span>
           <strong>Add a tiny treasure</strong>
-          <small>Open this drawer when you want to add a new doll.</small>
+          <small>Open this drawer to add a new doll or save an edit.</small>
         </button>
         <form id="previewDollForm" class="preview-doll-form" hidden>
+          <input id="editingIndexInput" type="hidden" value="" />
           <label>
-            Doll photo
+            Doll photo file name
+            <input id="dollPhotoPathInput" type="text" placeholder="assets/uploads/photo-name.jpg" />
+            <small class="field-help">Use only assets/uploads/photo-name.jpg for live photos.</small>
+          </label>
+          <label>
+            Or choose a preview photo
             <input id="dollPhotoInput" type="file" accept="image/*" />
           </label>
           <div class="field-row">
@@ -75,7 +82,8 @@
           </label>
           <div class="studio-actions">
             <button class="ghost" id="generateCaptionButton" type="button">Generate Caption</button>
-            <button class="primary" type="submit">Add Doll</button>
+            <button class="primary" id="saveDollButton" type="submit">Add Doll</button>
+            <button class="ghost" id="cancelEditButton" type="button" hidden>Cancel Edit</button>
           </div>
         </form>
       </section>
@@ -83,6 +91,6 @@
 
     <footer>Made for her favorite little friends.</footer>
     <script src="./content/content.js"></script>
-    <script src="./collection-preview.js"></script>
+    <script src="./collection-edit-preview.js"></script>
   </body>
 </html>

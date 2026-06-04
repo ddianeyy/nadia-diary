@@ -1,0 +1,106 @@
+.doll-card-actions {
+  position: relative;
+  z-index: 4;
+  display: none;
+  justify-content: flex-end;
+  padding: 0 16px 16px;
+}
+
+.doll-keepsake-card.is-open .doll-card-actions {
+  display: flex;
+}
+
+.doll-manage {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.doll-manage-toggle {
+  width: 38px;
+  min-width: 38px;
+  min-height: 38px;
+  border-radius: 50%;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.72);
+  color: #9d4055;
+  font-size: 18px;
+  box-shadow: 0 8px 18px rgba(128, 69, 82, 0.08);
+}
+
+.doll-manage-toggle:hover,
+.doll-manage-toggle:focus-visible {
+  background: rgba(255, 248, 216, 0.82);
+  transform: translateY(-1px);
+}
+
+.doll-manage-menu {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  display: none;
+  min-width: 142px;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid rgba(223, 127, 145, 0.24);
+  border-radius: 8px;
+  background: rgba(255, 250, 250, 0.96);
+  box-shadow: 0 16px 32px rgba(128, 69, 82, 0.14);
+}
+
+.doll-manage.is-open .doll-manage-menu {
+  display: grid;
+}
+
+.doll-manage-menu::after {
+  content: "";
+  position: absolute;
+  right: 13px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid rgba(223, 127, 145, 0.24);
+  border-bottom: 1px solid rgba(223, 127, 145, 0.24);
+  background: rgba(255, 250, 250, 0.96);
+  transform: rotate(45deg);
+}
+
+.doll-manage-menu button {
+  justify-content: flex-start;
+  min-height: 34px;
+  border-radius: 6px;
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+}
+
+.field-help {
+  display: block;
+  margin-top: 7px;
+  color: #8b6d76;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.empty-cabinet {
+  grid-column: 1 / -1;
+  padding: 34px 24px;
+  border: 1px dashed rgba(223, 127, 145, 0.42);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.68);
+  color: #7b646a;
+  text-align: center;
+}
+
+.empty-cabinet strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #3f2934;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+}
+
+.preview-doll-form.is-editing {
+  border-top: 3px solid rgba(223, 127, 145, 0.36);
+}
